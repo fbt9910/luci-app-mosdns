@@ -30,8 +30,8 @@ fi
 CHECK() (
 	echo -e "\r\n${GREEN_COLOR}Checking available space  ...${RES}"
 	ROOT_SPACE=$(df -m /usr | awk 'END{print $4}')
-	if [ $ROOT_SPACE -lt 40 ]; then
-		echo -e "\r\n${RED_COLOR}Error, The system storage space is less than 40MB.${RES}"
+	if [ $ROOT_SPACE -lt 10 ]; then
+		echo -e "\r\n${RED_COLOR}Error, The system storage space is less than 10MB.${RES}"
 		exit 1;
 	fi
 	echo -e "\r\n${GREEN_COLOR}Checking platform  ...${RES}\r\n"
